@@ -120,7 +120,7 @@ function experiment()
 {
 	if (current.includes("questionmark"))
 	{
-		alert("Please propose two fractals.")
+		alert("Please propose two elements.")
 	}else{
 		var out=combine(current[0], current[1]);
 		if (out==null || out[0]==null)
@@ -133,7 +133,7 @@ function experiment()
 		drawexperiment();
 		if (outcome=="none")
 		{
-			var outtext="This experiment did not create a new fractal.";
+			var outtext="This experiment did not create a new element.";
 		}
 		if (outcome!="none")
 		{
@@ -186,7 +186,7 @@ function mysubmit()
   	}else
   	{
   		clickStart("page5", "page6");
-  		var presenttotal='You have discovered '+(elements.length+4)+' fractals.';
+  		var presenttotal='You have discovered '+(elements.length+4)+' elements.';
 		//calculate money earned
 		var money =(elements.length+4)*0.1;
 		moneyp=toFixed(money, 2);
@@ -195,9 +195,9 @@ function mysubmit()
 		change('result',presenttotal); 
 		change('money',presentmoney);
 		//save all created values
-		var fractals=2021;
+		var pixels=2021;
 		myDataRef.push({collect: collect, elements: elements, money: money, 
-			            age: age, gender: gender, turkid: turkid, fractals: fractals})
+			            age: age, gender: gender, turkid: turkid, pixels: pixels})
 
   	}
 }

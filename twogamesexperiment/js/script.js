@@ -145,6 +145,7 @@ function instructioncheck()
 //Experiment
 ////////////////////////////////////////////////////////////////////////
 var blockStatusDiv = document.getElementById("currentGameRules");
+var blockStatusHist = document.getElementById("currentGameHistory");
 
 //this function initializes a trial
 function begintrial()
@@ -154,19 +155,19 @@ function begintrial()
   //initialize time count
   timeInMs = Date.now()
   if (currentBlock === 0) {
-    blockStatusDiv.innerHTML = "<br>You are playing Game 1.<br><br>\
+    blockStatusDiv.innerHTML = "<br><h3>You are now playing <b>Game 1</b></h3><br>\
                                 The rules of the game are as follows:<br>\
-                                If you choose <b>J</b> and the other player chooses <b>J</b>, then you win 8 points and the other player wins 8 points.<br>\
-                                If you choose <b>J</b> and the other player chooses <b>F</b>, then you win 0 points and the other player wins 10 points.<br>\
-                                If you choose <b>F</b> and the other player chooses <b>J</b>, then you win 10 points and the other player wins 0 points.<br>\
-                                If you choose <b>F</b> and the other player chooses <b>F</b>, then you win 5 points and the other player wins 5 points.<br><br>";
+                                If you choose <b>J</b> and the other player chooses <b>J</b>, then you win <b>8</b> points and the other player wins <b>8</b> points.<br>\
+                                If you choose <b>J</b> and the other player chooses <b>F</b>, then you win <b>0</b> points and the other player wins <b>10</b> points.<br>\
+                                If you choose <b>F</b> and the other player chooses <b>J</b>, then you win <b>10</b> points and the other player wins <b>0</b> points.<br>\
+                                If you choose <b>F</b> and the other player chooses <b>F</b>, then you win <b>5</b> points and the other player wins <b>5</b> points.<br><br>";
   } else if (currentBlock === 1) {
-    blockStatusDiv.innerHTML =  "<br>You are playing <b>Game 2</b>.<br><br>\
+    blockStatusDiv.innerHTML =  "<br><h3>You are now playing <b>Game 2</b></h3><br>\
                                 The rules of this game are as follows:<br>\
-                                If you choose <b>J</b> and the other player chooses <b>J</b>, then you win 7 points and the other player wins 10 points.<br>\
-                                If you choose <b>J</b> and the other player chooses <b>F</b>, then you win 0 points and the other player wins 0 points.<br>\
-                                If you choose <b>F</b> and the other player chooses <b>J</b>, then you win 0 points and the other player wins 0 points.<br>\
-                                If you choose <b>F</b> and the other player chooses <b>F</b>, then you win 10 points and the other player wins 7 points.<br><br>"
+                                If you choose <b>J</b> and the other player chooses <b>J</b>, then you win <b>7</b> points and the other player wins <b>10</b> points.<br>\
+                                If you choose <b>J</b> and the other player chooses <b>F</b>, then you win <b>0</b> points and the other player wins <b>0</b> points.<br>\
+                                If you choose <b>F</b> and the other player chooses <b>J</b>, then you win <b>0</b> points and the other player wins <b>0</b> points.<br>\
+                                If you choose <b>F</b> and the other player chooses <b>F</b>, then you win <b>10</b> points and the other player wins <b>7</b> points.<br><br>"
   }
   //get the pressed key
   $(document).keypress(function(e) 
@@ -261,6 +262,7 @@ function calculate_points_pd(playerChoice, opponentChoice) {
 }
 
 let playerChoices = "";  // Initialize an empty string to store player choices
+let historyMessage = "";  // Initialize an empty string to store the history of the game
 
 // Function that executes the bandit
 function myfunc(inp) {
@@ -307,21 +309,27 @@ function myfunc(inp) {
 
   // Display choices and points for both participant and opponent
   let outcomeMessage = `
-    You chose ${inp === 0 ? "F" : "J"} and your opponent chose ${opponentChoice}.<br>
-    You won ${playerPoints} points and your opponent won ${opponentPoints} points.
+    You chose ${inp === 0 ? "F" : "J"}, Opponent chose ${opponentChoice}<br>
+    You won ${playerPoints} points, Opponent won ${opponentPoints} points
+  `;
+
+  historyMessage += `
+    In round <b>${trial+1}</b>, you chose <b>${inp === 0 ? "F" : "J"}</b> and your opponent chose <b>${opponentChoice}</b>. Thus, you won <b>${playerPoints}</b> points and your opponent won <b>${opponentPoints}</b> points.<br>
   `;
 
   // Display on screen
   change('outcome', outcomeMessage);
 
-  // Set a timeout; after 5 seconds, start the next trial
+  // Set a timeout; after 2 seconds, start the next trial
   setTimeout(function() {
     nexttrial();
-  }, 5000);
+  }, 2000);
+
 }
 
 function nexttrial()
 {
+  change('currentGameHistory', historyMessage);
   //check if trials are smaller than the maximum trial number
   if (trial+1<ntrials)
   {
@@ -335,7 +343,8 @@ function nexttrial()
     //begin new trial
     begintrial();
     //track total score
-    totalscore=totalscore+out;
+    totalscore += out;
+    overallscore += out;
     //to be inserted total score
     var inserts='Total Score: '+toFixed(totalscore,0);
     //show total score on screen
@@ -368,8 +377,10 @@ function nexttrial()
 function nextblock()
 {
   playerChoices = "";
+  historyMessage = "";
+  change('currentGameHistory', historyMessage);
   //update overall score
-  overallscore=overallscore+totalscore;
+  // overallscore=overallscore+totalscore;
   //borders back to normal
   borders=['border="1">','border="1">'];
   //new letters and boxes

@@ -26,7 +26,6 @@
 	<link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
 	<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 	<link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
-	<link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
 
 	<!-- Main Stylesheet File -->
 	<link href="css/style.css" rel="stylesheet">
@@ -37,14 +36,18 @@
     Author: BootstrapMade.com
     License: https://bootstrapmade.com/license/
   ======================================================= -->
+
+	<!-- Page-local styles (keeps markup cleaner) -->
+	<style>
+		.person-photo {
+			width: 180px;
+			height: 180px;
+			object-fit: cover;
+		}
+	</style>
 </head>
 
 <body id="body">
-
-	<!--==========================
-    Top Bar
-  ============================-->
-
 
 	<!--==========================
     Header
@@ -53,8 +56,9 @@
 		<div class="container">
 
 			<div id="logo" class="pull-left">
-				<!-- <a href="index.html"><img src="img/logo_with_text_helmholtz_colors.png" height="50" alt="" title="Logo"/></a> -->
-				<a href="index.html"><img src="img/logo_with_text_helmholtz_colors.png" height="50" alt="" title="Logo"/></a>
+				<a href="index.html">
+					<img src="img/logo_with_text_helmholtz_colors.png" height="50" alt="" title="Logo" />
+				</a>
 			</div>
 
 			<nav id="nav-menu-container">
@@ -73,17 +77,19 @@
 	<main id="main">
 
 		<!--==========================
-      About Section
+      People Section
     ============================-->
 		<section id="about" class="wow">
 			<div id="peoplep" class="container" style="display:block">
 				<div class="container">
 					<div class="row">
 						<p></p>
+
 						<div class="col-xs-12 col-md-6 col-lg-4">
 							<div class="thumbnail">
-								<a href="eric.html"> <img src="img/eric.jpg" id="shadow" alt="Eric" class="img-rounded"
-										style="width:180px;height:180px;object-fit:cover;"> </a>
+								<a href="eric.html">
+									<img src="img/eric.jpg" id="shadow" alt="Eric" class="img-rounded person-photo">
+								</a>
 								<div class="caption">
 									<h4>Eric Schulz<br><small><small>Primary Investigator</small></small></h4>
 								</div>
@@ -92,49 +98,35 @@
 
 						<div class="col-xs-12 col-md-6 col-lg-4">
 							<div class="thumbnail">
-								<a href="marcel.html"> <img src="img/marcel.jpg" id="shadow" alt="Marcel"
-										class="img-rounded" style="width:180px;height:180px;object-fit:cover;"></a>
+								<a href="marcel.html">
+									<img src="img/marcel.jpg" id="shadow" alt="Marcel" class="img-rounded person-photo">
+								</a>
 								<div class="caption">
 									<h4>Marcel Binz<br><small><small>Postdoctoral Researcher</small></small></h4>
 								</div>
 							</div>
 						</div>
-						
 
 						<div class="col-xs-12 col-md-6 col-lg-4">
 							<div class="thumbnail">
-								<a href="mirko.html"> <img src="img/mirko.jpg" id="shadow" alt="Mirko"
-										class="img-rounded" style="width:180px;height:180px;object-fit:cover;"> </a>
+								<a href="mirko.html">
+									<img src="img/mirko.jpg" id="shadow" alt="Mirko" class="img-rounded person-photo">
+								</a>
 								<div class="caption">
 									<h4>Mirko Thalmann<br><small><small>Postdoctoral Researcher</small></small></h4>
 								</div>
 							</div>
 						</div>
 
-						<div class="col-xs-12 col-md-6 col-lg-4">
-							<div class="thumbnail">
-								<a href="milena.html"> <img src="img/milena.jpg" id="shadow" alt="Milena"
-										class="img-rounded" style="width:180px;height:180px;object-fit:cover;"></a>
-								<div class="caption">
-									<h4>Milena Rmus<br><small><small>Postdoctoral Researcher</small></small></h4>
-								</div>
-							</div>
-						</div>
+						<!-- Milena moved to Alumni -->
+
+						<!-- Konstantinos moved to Alumni -->
 
 						<div class="col-xs-12 col-md-6 col-lg-4">
 							<div class="thumbnail">
-								<a href="konstantinos.html"> <img src="img/konstantinos.jpeg" id="shadow" alt="Konstantinos"
-										class="img-rounded" style="width:180px;height:180px;object-fit:cover;"></a>
-								<div class="caption">
-									<h4>Konstantinos Voudouris<br><small><small>Postdoctoral Researcher</small></small></h4>
-								</div>
-							</div>
-						</div>
-						
-						<div class="col-xs-12 col-md-6 col-lg-4">
-							<div class="thumbnail">
-								<a href="alireza.html"> <img src="img/alireza.jpg" id="shadow" alt="Alireza"
-										class="img-rounded" style="width:180px;height:180px;object-fit:cover;"></a>
+								<a href="alireza.html">
+									<img src="img/alireza.jpg" id="shadow" alt="Alireza" class="img-rounded person-photo">
+								</a>
 								<div class="caption">
 									<h4>Alireza Modirshanechi<br><small><small>Postdoctoral Researcher</small></small></h4>
 								</div>
@@ -143,40 +135,33 @@
 
 						<div class="col-xs-12 col-md-6 col-lg-4">
 							<div class="thumbnail">
-								<a href="alex.html"> <img src="img/alex.jpg" id="shadow" alt="Alexander"
-										class="img-rounded" style="width:180px;height:180px;object-fit:cover;"> </a>
+								<a href="alex.html">
+									<img src="img/alex.jpg" id="shadow" alt="Alexander" class="img-rounded person-photo">
+								</a>
 								<div class="caption">
 									<h4>Alexander Kipnis<br><small><small>PhD Researcher</small></small></h4>
 								</div>
 							</div>
 						</div>
 
-						
-
 						<div class="col-xs-12 col-md-6 col-lg-4">
 							<div class="thumbnail">
-								<a href="tobias.html"> <img src="img/tobias.jpg" id="shadow" alt="Kristin"
-										class="img-rounded" style="width:180px;height:180px;object-fit:cover;"></a>
+								<a href="tobias.html">
+									<img src="img/tobias.jpg" id="shadow" alt="Tobias" class="img-rounded person-photo">
+								</a>
 								<div class="caption">
 									<h4>Tobias Ludwig<br><small><small>PhD Researcher</small></small></h4>
 								</div>
 							</div>
 						</div>
 
-						<div class="col-xs-12 col-md-6 col-lg-4">
-							<div class="thumbnail">
-								<a href="julian.html"> <img src="img/julian.jpg" id="shadow" alt="Julian"
-										class="img-rounded" style="width:180px;height:180px;object-fit:cover;"></a>
-								<div class="caption">
-									<h4>Julian Coda-Forno<br><small><small>PhD Researcher</small></small></h4>
-								</div>
-							</div>
-						</div>
+						<!-- Julian moved to Alumni -->
 
 						<div class="col-xs-12 col-md-6 col-lg-4">
 							<div class="thumbnail">
-								<a href="kristin.html"> <img src="img/kristin.jpg" id="shadow" alt="Kristin"
-										class="img-rounded" style="width:180px;height:180px;object-fit:cover;"> </a>
+								<a href="kristin.html">
+									<img src="img/kristin.jpg" id="shadow" alt="Kristin" class="img-rounded person-photo">
+								</a>
 								<div class="caption">
 									<h4>Kristin Witte<br><small><small>PhD Researcher</small></small></h4>
 								</div>
@@ -185,8 +170,9 @@
 
 						<div class="col-xs-12 col-md-6 col-lg-4">
 							<div class="thumbnail">
-								<a href="luca.html"> <img src="img/luca.jpg" id="shadow" alt="Luca"
-										class="img-rounded" style="width:180px;height:180px;object-fit:cover;"> </a>
+								<a href="luca.html">
+									<img src="img/luca.jpg" id="shadow" alt="Luca" class="img-rounded person-photo">
+								</a>
 								<div class="caption">
 									<h4>Luca Schulze Buschoff<br><small><small>PhD Researcher</small></small></h4>
 								</div>
@@ -195,19 +181,20 @@
 
 						<div class="col-xs-12 col-md-6 col-lg-4">
 							<div class="thumbnail">
-								<a href="can.html"> <img src="img/can.jpg" id="shadow" alt="Can" class="img-rounded"
-										style="width:180px;height:180px;object-fit:cover;"></a>
+								<a href="can.html">
+									<img src="img/can.jpg" id="shadow" alt="Can" class="img-rounded person-photo">
+								</a>
 								<div class="caption">
 									<h4>Can Demircan<br><small><small>PhD Researcher</small></small></h4>
 								</div>
 							</div>
 						</div>
 
-
 						<div class="col-xs-12 col-md-6 col-lg-4">
 							<div class="thumbnail">
-								<a href="elif.html"> <img src="img/elif.jpg" id="shadow" alt="Elif"
-										class="img-rounded" style="width:180px;height:180px;object-fit:cover;"></a>
+								<a href="elif.html">
+									<img src="img/elif.jpg" id="shadow" alt="Elif" class="img-rounded person-photo">
+								</a>
 								<div class="caption">
 									<h4>Elif Akata<br><small><small>PhD Researcher</small></small></h4>
 								</div>
@@ -216,8 +203,9 @@
 
 						<div class="col-xs-12 col-md-6 col-lg-4">
 							<div class="thumbnail">
-								<a href="marvin.html"> <img src="img/marvin.JPG" id="shadow" alt="Marvin"
-										class="img-rounded" style="width:180px;height:180px;object-fit:cover;"></a>
+								<a href="marvin.html">
+									<img src="img/marvin.JPG" id="shadow" alt="Marvin" class="img-rounded person-photo">
+								</a>
 								<div class="caption">
 									<h4>Marvin Mathony<br><small><small>PhD Researcher</small></small></h4>
 								</div>
@@ -226,8 +214,9 @@
 
 						<div class="col-xs-12 col-md-6 col-lg-4">
 							<div class="thumbnail">
-								<a href="maryam.html"> <img src="img/maryam.jpeg" id="shadow" alt="Maryam"
-										class="img-rounded" style="width:180px;height:180px;object-fit:cover;"></a>
+								<a href="maryam.html">
+									<img src="img/maryam.jpeg" id="shadow" alt="Maryam" class="img-rounded person-photo">
+								</a>
 								<div class="caption">
 									<h4>Maryam Meghdadi<br><small><small>PhD Researcher</small></small></h4>
 								</div>
@@ -236,8 +225,9 @@
 
 						<div class="col-xs-12 col-md-6 col-lg-4">
 							<div class="thumbnail">
-								<a href="beste.html"> <img src="img/beste.jpeg" id="shadow" alt="Beste"
-										class="img-rounded" style="width:180px;height:180px;object-fit:cover;"></a>
+								<a href="beste.html">
+									<img src="img/beste.jpeg" id="shadow" alt="Beste" class="img-rounded person-photo">
+								</a>
 								<div class="caption">
 									<h4>Beste Tasci<br><small><small>PhD Researcher</small></small></h4>
 								</div>
@@ -246,8 +236,9 @@
 
 						<div class="col-xs-12 col-md-6 col-lg-4">
 							<div class="thumbnail">
-								<a href="viktoria.html"> <img src="img/viktoria.jpeg" id="shadow" alt="Viktoria"
-										class="img-rounded" style="width:180px;height:180px;object-fit:cover;"></a>
+								<a href="viktoria.html">
+									<img src="img/viktoria.jpeg" id="shadow" alt="Viktoria" class="img-rounded person-photo">
+								</a>
 								<div class="caption">
 									<h4>Viktoria Schweiberger<br><small><small>Administrative Assistant</small></small></h4>
 								</div>
@@ -255,74 +246,103 @@
 						</div>
 
 					</div>
+
 					<br>
-          				<h2>Alumni</h2>
+					<h2>Alumni (and where they moved)</h2>
 					<div class="row">
 
 						<div class="col-xs-12 col-md-6 col-lg-4">
 							<div class="thumbnail">
-								<a href="franziska.html"> <img src="img/franziska.jpg" id="shadow" alt="Franziska"
-										class="img-rounded" style="width:180px;height:180px;object-fit:cover;"> </a>
-								<div class="caption">
-									<h4>Franziska Brändle<br><small><small>Moved to University of Oxford</small></small></h4>
-								</div>
-							</div>
-						</div>
-<div class="col-xs-12 col-md-6 col-lg-4">
-
-
-
-							<div class="thumbnail">
-								<a href="susanne.html"> <img src="img/susanne.jpg" id="shadow" alt="Susanne"
-										class="img-rounded" style="width:180px;height:180px;object-fit:cover;"> </a>
-								<div class="caption">
-									<h4>Susanne Haridi<br><small><small>Moved to LMU</small></small></h4>
-								</div>
-							</div>
-						</div>
-						
-<div class="col-xs-12 col-md-6 col-lg-4">
-
-
-
-							<div class="thumbnail">
-								<a href="akshay.html"> <img src="img/akshay.jpg" id="shadow" alt="Askhay"
-										class="img-rounded" style="width:180px;height:180px;object-fit:cover;"> </a>
+								<a href="akshay.html">
+									<img src="img/akshay.jpg" id="shadow" alt="Akshay" class="img-rounded person-photo">
+								</a>
 								<div class="caption">
 									<h4>Akshay Jagadish<br><small><small>Moved to Princeton</small></small></h4>
 								</div>
 							</div>
 						</div>
 
-<div class="col-xs-12 col-md-6 col-lg-4">
-
-
-
+						<div class="col-xs-12 col-md-6 col-lg-4">
 							<div class="thumbnail">
-								<a href="tankred.html"> <img src="img/tankred.jpg" id="shadow" alt="Tankred"
-										class="img-rounded" style="width:180px;height:180px;object-fit:cover;"> </a>
+								<a href="franziska.html">
+									<img src="img/franziska.jpg" id="shadow" alt="Franziska" class="img-rounded person-photo">
+								</a>
 								<div class="caption">
-									<h4>Tankred Saanum<br><small><small>Moved to Harvard</small></small></h4>
+									<h4>Franziska Brändle<br><small><small>Moved to University of Oxford</small></small></h4>
 								</div>
 							</div>
 						</div>
-						
+
 						<div class="col-xs-12 col-md-6 col-lg-4">
 							<div class="thumbnail">
-								<a href="shuchen.html"> <img src="img/shuchen.jpg" id="shadow" alt="Shuchen"
-										class="img-rounded" style="width:180px;height:180px;object-fit:cover;"> </a>
+								<a href="julian.html">
+									<img src="img/julian.jpg" id="shadow" alt="Julian" class="img-rounded person-photo">
+								</a>
+								<div class="caption">
+									<h4>Julian Coda-Forno<br><small><small>Moved to Recursive</small></small></h4>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-xs-12 col-md-6 col-lg-4">
+							<div class="thumbnail">
+								<a href="konstantinos.html">
+									<img src="img/konstantinos.jpeg" id="shadow" alt="Konstantinos" class="img-rounded person-photo">
+								</a>
+								<div class="caption">
+									<h4>Konstantinos Voudouris<br><small><small>Moved to UK AI Security Institute</small></small></h4>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-xs-12 col-md-6 col-lg-4">
+							<div class="thumbnail">
+								<a href="milena.html">
+									<img src="img/milena.jpg" id="shadow" alt="Milena" class="img-rounded person-photo">
+								</a>
+								<div class="caption">
+									<h4>Milena Rmus<br><small><small>Moved to Roundtable</small></small></h4>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-xs-12 col-md-6 col-lg-4">
+							<div class="thumbnail">
+								<a href="shuchen.html">
+									<img src="img/shuchen.jpg" id="shadow" alt="Shuchen" class="img-rounded person-photo">
+								</a>
 								<div class="caption">
 									<h4>Shuchen Wu<br><small><small>Moved to Allen Institute</small></small></h4>
 								</div>
 							</div>
 						</div>
-						
+
+						<div class="col-xs-12 col-md-6 col-lg-4">
+							<div class="thumbnail">
+								<a href="susanne.html">
+									<img src="img/susanne.jpg" id="shadow" alt="Susanne" class="img-rounded person-photo">
+								</a>
+								<div class="caption">
+									<h4>Susanne Haridi<br><small><small>Moved to LMU</small></small></h4>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-xs-12 col-md-6 col-lg-4">
+							<div class="thumbnail">
+								<a href="tankred.html">
+									<img src="img/tankred.jpg" id="shadow" alt="Tankred" class="img-rounded person-photo">
+								</a>
+								<div class="caption">
+									<h4>Tankred Saanum<br><small><small>Moved to Harvard</small></small></h4>
+								</div>
+							</div>
+						</div>
+
 					</div>
-					
+
 				</div>
-
 			</div>
-
 		</section>
 
 	</main>
@@ -348,3 +368,4 @@
 </body>
 
 </html>
+
